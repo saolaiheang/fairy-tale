@@ -4,14 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>Stories Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body>
-    <div id="container">
-        
-    </div>
+   
+    <body style=" background-color: #e8ebda; padding-bottom: 20px;">
+    
+        <div class="container">
+            <!--nav-bar-->
+            <header class="d-flex justify-content-center py-3 border-bottom border-success">
+             <a href="/index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+               <span class="fs-4">Fairy Tale</span>
+             </a>
+             <ul class="nav nav-bar fs-4">
+               <li class="nav-item"><a href="../index.html" class="nav-link link-success" aria-current="page">Home</a></li>
+               <li class="nav-item"><a href="index.html" class="nav-link  text-light text-bg-success active" style="color: white;border-radius: 5px;">Stories</a></li>
+               <li class="nav-item"><a href="../contact page/index.html" class="nav-link link-success">Contact</a></li>
+              </ul>
+            </header>
+          </div>
+          <!--filter-->
+          
+            <section>
+              <div class="filter">
+                <div class="filter-bar">
+                    ALL<a class="filter-circle" href="../stories/index.html?age=all"><div onclick="all()" id="all" class="click-circle" ></div></a>
+                    0-3<a class="filter-circle" href="../stories/index.html?age=0-3"><div onclick="age03()" id="age03" class="click-circle"></div></a>
+                    4-6<a class="filter-circle" href="../stories/index.html?age=4-6"><div onclick="age46()" id="age46" class="click-circle"></div></a>
+                    7-12<a class="filter-circle" href="../stories/index.html?age=7-12"><div  onclick="age712()" id="age712" class="click-circle"></div></a>
+                  </div>
+                <div class="border-right"></div>
+                <div class="short-by-year">
+                    <p>Sort by year</p>
+                    <a href=""><i class="fa-solid fa-arrow-up"></i></a>
+                    <a href=""><i class="fa-solid fa-arrow-down"></i></a>
+                  </div>
+                </div>
+            <!--display-Article-->
+            <div id="url"></div>
+          </section>
 
+   
+        
     <script src="index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

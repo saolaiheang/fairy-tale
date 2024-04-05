@@ -1,47 +1,59 @@
-let paramString = window.location.search;
-let urlParam = new URLSearchParams(paramString);
-let value = urlParam.get('name');
-console.log(value);
+let params = new URLSearchParams(document.location.search);
+let age = params.get("age");
 
-// fetch api + pass value from url parameter to url
+console.log(age);
 
-// 
-function fetchData(){
-    fetch("https://fairy-tale-api-inky.vercel.app/api/fairytales")
-    .then((response) => {
-        return response.json();
-    })
-    .then ((data) => {
-        let card =document.getElementById("container");
-        for(let i=0 ; i<data.length;i++) {
-            if(data[i].id) {
-                card.innerHTML += `
-                <div class="card mb-3" style="max-width: 100%;">
-            <div class="row g-0">
-              <div class="col-md-4">
-              <img style="width:200px;" src="${data[i].image}" alt="">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                
-                  <h5 class="card-title">${data[i].title}</h5>
-                  <p class="card-text">${data[i].summary}</p>
-                  <p class="card-text"><audio controls>
-                  <source src="${data[i].audio}">
-                </audio></p>
+let url = "https://fairy-tale-api-inky.vercel.app/api/fairytales";
+
+// let urlpara = url+'?'+${data[i].id};
+fetch(url)
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    const card = document.getElementById("url");
+
+    if (age === "all") {
+      for (let i = 0; i < data.length; i++) {
+        card.innerHTML += `
+               
+                <div class="each-card">
+                <div class="images"><img src="${data[i].image}"></img></div>
+                <div class="txt">
+                <a href='../stories detail/index.html?id=${data[i].id}'>${data[i].title}</a>
+                <p>${data[i].summary}</p>
+                <div class="txt2">
+                <p>author’s name: ${data[i].author}</p>
+                <p>Year : ${data[i].created_at}</p>
                 </div>
+                <audio controls>
+                        <source src="${data[i].audio}" type="audio/mp3">
+                      </audio>
+                </div>
+                </div>`;
+      }
+    } else {
+      for (let i = 0; i < data.length; i++) {
+        if (data[i].age === age) {
+          card.innerHTML += `
+             
+              <div class="each-card">
+              <div class="images"><img src="${data[i].image}"></img></div>
+              <div class="txt">
+             <a href='../stories detail/index.html?id=${data[i].id}'>${data[i].title}</a>
+              <p>${data[i].summary}</p>
+              <div class="txt2">
+              <p>author’s name: ${data[i].author}</p>
+              <p>Year : ${data[i].created_at}</p>
               </div>
-            </div>
-          </div>
-                
-                `;
-            }
+              <audio controls>
+                      <source src="${data[i].audio}" type="audio/mp3">
+                    </audio>
+              </div>
+              </div>`;
         }
-    })
-    .then ((error) => {
-        console.error('error:',error)
-    })
-    return fetchData;
-};
-
-fetchData();
+      }
+    }
+    console.log(data);
+  })
+  .catch((error) => console.error("Error:", error));

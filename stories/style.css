@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #288268;
+    
+    
+}
+
+#url{
+    color: #288268;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    
+}
+.container{
+    width: 100%;
+}
+section{
+    width: 100%;
+}
+.filter{
+    margin-top: 30px;
+    /* max-width: 100%; */
+    margin-left: 52.5%;
+    display: flex;
+    align-items: center;
+}
+.filter-bar{
+    width: 30%;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.filter-circle{
+    padding: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.click-circle{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+.click-circle:hover{
+    background-color: black;
+}
+.border-right{
+    height: 30px;
+    border-right : 1px solid black;
+}
+.short-by-year{
+    display: flex;
+    align-items: center;
+}
+.short-by-year p{
+    margin-top: 15px;
+    font-size: 20px;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+.short-by-year i{
+    color: black;
+    margin-right:10px;
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 15px;
+}
+.each-card{
+    height: auto;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    /* gap: 20px; */
+    height: 290px;
+    width: 63%;
+    margin: auto;
+    border: 1px solid #288268;
+    margin-top: 20px; 
+    border-radius: 5px;
+    background-color: rgba(255, 217, 247, 0.247);
+     
+}
+.images{
+    width: 30%;
+    height:230px;
+    margin-right: -55px;
+}
+.images img{
+    filter: drop-shadow(5px 5px 10px gray);
+    border-radius: 10px;
+    width: 85%;
+    /* object-fit: scale-down; */
+    height: 100%;
+    object-fit: cover;
+}
+.txt{
+    height: auto;
+    width: 70%;
+    /* line-height: 1; */
+}
+.txt :nth-child(1){
+    /* color: #0fb0d9c0; */
+    /* text-decoration: none; */
+    line-height: 1;
+    font-weight: 600;
+    margin-left: 23px;
+    font-size: 20px;
+    /* margin-top: 5px; */
+}
+.txt :nth-child(2){
+    text-align: justify;
+    line-height: 1;
+    margin-left: 23px;
+    font-size: 17px;
+    /* margin-top: 5px; */
+}
+.txt2{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    font-size: 20;
+    margin-bottom: 8px;
+}
+.txt2 :nth-child(1){
+    font-weight: 500;
+}
+.txt2 :nth-child(2){
+    font-size: 18px;
+}
+audio{
+    margin-left: 23px;
+    /* background-color: black; */
+   margin-top: 4%;
+    width: 98%;
+}
