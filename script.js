@@ -87,7 +87,7 @@ function dataHome () {
             <img src="${data[i].image}" alt="">
           </div>
           <div class="param">
-            <h2>${data[i].title}</h2>
+          <a href="../../stories detail/index.html?id=${data[i].id}" class="card-title">${data[i].title}</a>
             <p>${data[i].summary}</p>
           </div>
         </div>
@@ -109,7 +109,7 @@ function dataHome () {
             <img src="${data[i].image}" alt="">
           </div>
           <div class="param">
-            <h2>${data[i].title}</h2>
+          <a href="../../stories detail/index.html?id=${data[i].id}" class="card-title">${data[i].title}</a>
             <p>${data[i].summary}</p>
           </div>
         </div>
@@ -130,7 +130,7 @@ function dataHome () {
             <img src="${data[i].image}" alt="">
           </div>
           <div class="param">
-            <h2>${data[i].title}</h2>
+          <a href="../../stories detail/index.html?id=${data[i].id}" class="card-title">${data[i].title}</a>
             <p>${data[i].summary}</p>
           </div>
         </div>

@@ -1,0 +1,66 @@
+body{
+    width: 100%;
+    background-color:#e8ebda;
+}
+#detail{
+    width: 100%;
+    height: 800px;
+  
+}
+
+.image{
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+}
+.description{
+    width: 70%;
+    margin-bottom: -5%;
+    margin: auto;
+}
+.card-body{
+    width: 100%;
+  margin-top: 3%;
+    text-align: left;
+    line-height: 2;
+    font-size: 28px;
+  
+    
+}
+p{
+    color: #288268;
+
+}
+audio{
+    width: 100%;
+    margin-top:3%;
+    margin-bottom: 5%;
+    margin-left: -1%;
+
+}
+.card-title{
+    line-height: 2;
+}
+.description img{
+    margin-top: 3%;
+    width: 100%;
+}
+.fs-4{color: #288268;
+    
+
+}
+.nav-link{
+    color: #288268;
+}
+.active{
+    color: #ffffff;
+    background-color: #288268;
+
+}
+.active:hover{
+    color: rgb(255, 255, 255);
+}
+.container{
+    border-bottom: 1px solid #288268;
+    font-size: 25px;
+}

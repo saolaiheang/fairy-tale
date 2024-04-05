@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Stories Page</title>
+    <link rel="stylesheet" href="/component/filter/filter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
@@ -14,15 +16,31 @@
             <span class="fs-4">Fairy Tale</span>
           </a>
           <ul class="nav nav-pills">
-            <li class="nav-item"><a href="../../index.html" class="nav-link " aria-current="page">Home</a></li>
-            <li class="nav-item"><a href="../stories/index.html?age=all" class="nav-link active">Stories</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="../../index.html" class="nav-link link-success " aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="../stories/index.html?age=all" class="nav-link active bg-success link-light">Stories</a></li>
+            <li class="nav-item"><a href="/contact page/index.html" class="nav-link link-success">Contact</a></li>
           </ul>
         </header>
       </div>
+      
     <!-- <a href="../stories/index.html?age=all">stories</a> -->
     <div id="container">
-        
+      <section>
+        <div class="filter">
+          <div class="filter-bar">
+              ALL<a class="filter-circle"  onclick="all()" href="../stories/index.html?age=all"><div class="click-circle"></div></a>
+              0-3<a class="filter-circle" onclick="age03()" href="../stories/index.html?age=0-3"><div class="click-circle"></div></a>
+              4-6<a class="filter-circle" onclick="age46()" href="../stories/index.html?age=4-6"><div class="click-circle"></div></a>
+              7-12<a class="filter-circle" onclick="age712()" href="../stories/index.html?age=7-12"><div class="click-circle"></div></a>
+          </div>
+          <div class="border-right"></div>
+          <div class="short-by-year">
+              <p>Sort by year</p>
+              <a href=""><i class="fa-solid fa-arrow-up"></i></a>
+              <a href=""><i class="fa-solid fa-arrow-down"></i></a>
+          </div>
+          </div>
+      </section>
     </div>
 
     <script src="index.js"></script>

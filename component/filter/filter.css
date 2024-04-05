@@ -1,6 +1,7 @@
 .filter{
     display: flex;
     align-items: center;
+    
 }
 .filter-bar{
     width: 30%;
@@ -8,6 +9,9 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin-left: 820px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .filter-circle{
     padding: 5px;
